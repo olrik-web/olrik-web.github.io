@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcus Olrik - Backend Developer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --accent: #2563eb;
+            --bg: #ffffff;
+            --border: #e5e5e5;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--bg);
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            margin-bottom: 1rem;
+        }
+
+        .contact {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .contact a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: var(--text-secondary);
+        }
+
+        .experience-item, .project-item {
+            margin-bottom: 2rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .experience-item:last-child, .project-item:last-child {
+            border-bottom: none;
+        }
+
+        .experience-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .job-title, .project-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .company, .project-tech {
+            color: var(--accent);
+            font-weight: 500;
+        }
+
+        .date {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .description {
+            margin-top: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .description ul {
+            margin-left: 1.25rem;
+            margin-top: 0.5rem;
+        }
+
+        .description li {
+            margin-bottom: 0.5rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: #f3f4f6;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .interests {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+
+        .blog-link {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: opacity 0.2s;
+        }
+
+        .blog-link:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .experience-header, .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .date {
+                margin-top: 0.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Marcus Olrik</h1>
+        <div class="subtitle">Backend Developer</div>
+        <div class="contact">
+            <a href="mailto:molrik@outlook.com">molrik@outlook.com</a>
+            <a href="https://github.com/marcusolrik" target="_blank">GitHub</a>
+            <a href="https://linkedin.com/in/marcus-olrik" target="_blank">LinkedIn</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <div class="intro">
+                <p>Backend developer specializing in .NET and Umbraco CMS. I focus on building reliable server-side solutions, working with database design, API development, and search engines. With experience across the full stack, I understand how systems fit together and collaborate effectively with frontend teams to deliver complete web applications.</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Work Experience</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">System Developer</div>
+                        <div class="company">Illumi A/S</div>
+                    </div>
+                    <div class="date">Aug 2023 – Present</div>
+                </div>
+                <div class="description">
+                    <ul>
+                        <li>Develop and maintain web applications using Umbraco CMS and .NET</li>
+                        <li>Work with TypeScript, JavaScript, HTML, and CSS (SCSS) for frontend integration</li>
+                        <li>Build custom integrations and extend CMS functionality</li>
+                        <li>Collaborate with teams to implement new features and maintain code quality</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">System Developer (Internship)</div>
+                        <div class="company">Illumi A/S</div>
+                    </div>
+                    <div class="date">Jan 2023 – Jun 2023</div>
+                </div>
+                <div class="description">
+                    <ul>
+                        <li>Worked on various projects using TypeScript, JavaScript, C#, and .NET</li>
+                        <li>Gained experience with modern web development practices and tools</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Student System Developer</div>
+                        <div class="company">Apport Systems A/S</div>
+                    </div>
+                    <div class="date">Jan 2022 – Dec 2022</div>
+                </div>
+                <div class="description">
+                    <ul>
+                        <li>Built web applications with .NET, C#, and Blazor</li>
+                        <li>Integrated OAuth authentication and third-party services</li>
+                        <li>Developed internal tools including time tracking systems</li>
+                        <li>Worked with Azure DevOps for project management and deployment</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Full Stack Developer (Internship)</div>
+                        <div class="company">Maxtel.dk ApS</div>
+                    </div>
+                    <div class="date">Aug 2021 – Jan 2022</div>
+                </div>
+                <div class="description">
+                    <ul>
+                        <li>Developed databases using Entity Framework</li>
+                        <li>Worked with .NET and C# on various projects</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section>
+            <h2>Technical Skills</h2>
+            <div class="tech-stack">
+                <span class="tech-tag">C#</span>
+                <span class="tech-tag">.NET</span>
+                <span class="tech-tag">ASP.NET Core</span>
+                <span class="tech-tag">Umbraco CMS</span>
+                <span class="tech-tag">Entity Framework</span>
+                <span class="tech-tag">SQL Server</span>
+                <span class="tech-tag">Algolia Search</span>
+                <span class="tech-tag">REST APIs</span>
+                <span class="tech-tag">TypeScript</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML/CSS</span>
+                <span class="tech-tag">SCSS</span>
+                <span class="tech-tag">Blazor</span>
+                <span class="tech-tag">Git</span>
+            </div>
+        </section> -->
+
+        <section>
+            <h2>Education</h2>
+            
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Bachelor's in Web Development</div>
+                        <div class="company">Business Academy Aarhus</div>
+                    </div>
+                    <div class="date">2022 – 2023</div>
+                </div>
+                <div class="description">
+                    <p>Advanced web development including UI/UX design, frontend technologies, PHP, Remix framework, PWAs with service workers, and desktop app development with Electron.</p>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">Associate's in Computer Science</div>
+                        <div class="company">Business Academy Aarhus</div>
+                    </div>
+                    <div class="date">2019 – 2022</div>
+                </div>
+                <div class="description">
+                    <p>Core computer science fundamentals including Java, database design, agile methodologies, ASP.NET, Entity Framework, WPF, mobile development with Flutter, system architecture, and networking concepts.</p>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div>
+                        <div class="job-title">General Upper Secondary Education</div>
+                        <div class="company">Bjerringbro Gymnasium</div>
+                    </div>
+                    <div class="date">2014 – 2017</div>
+                </div>
+                <div class="description">
+                    <p>Math, physics, international economy, and computer science fundamentals.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- <section>
+            <h2>Projects</h2>
+            
+            <div class="project-item">
+                <div class="project-header">
+                    <div>
+                        <div class="project-name">Project Name</div>
+                        <div class="project-tech">Umbraco • .NET • SQL</div>
+                    </div>
+                </div>
+                <div class="description">
+                    <p>Description of a personal or work project that demonstrates your skills. What problem did it solve? What did you learn?</p>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-header">
+                    <div>
+                        <div class="project-name">Another Project</div>
+                        <div class="project-tech">C# • ASP.NET Core</div>
+                    </div>
+                </div>
+                <div class="description">
+                    <p>Another project showcasing different aspects of your development work.</p>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- <section>
+            <h2>Beyond Code</h2>
+            <div class="interests">
+                <p>When I'm not coding, I spend time outdoors—running local trails and going on cycling tours. I enjoy traveling to new places, watching films, and playing video games. These activities help me recharge and often provide unexpected perspectives on problem-solving.</p>
+            </div>
+            <a href="/travels" class="blog-link">Travel Notes & Photos</a>
+        </section> -->
+    </main>
+
+    <footer>
+        <p>Built with vanilla HTML & CSS ❤️</p>
+    </footer>
+</body>
+</html>
