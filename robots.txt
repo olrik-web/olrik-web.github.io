@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://marcusolrik.dk/sitemap.xml
+
+# Disallow common files that shouldn't be crawled
+Disallow: /styles.css
+Disallow: /*.pdf$
