@@ -7,16 +7,16 @@
     <lastmod>2025-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://marcusolrik.dk/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marcusolrik.dk/en/index.html"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://marcusolrik.dk/index.html"/>
   </url>
   
   <url>
-    <loc>https://marcusolrik.dk/index-en.html</loc>
+    <loc>https://marcusolrik.dk/en/index.html</loc>
     <lastmod>2025-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://marcusolrik.dk/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marcusolrik.dk/en/index.html"/>
     <xhtml:link rel="alternate" hreflang="da" href="https://marcusolrik.dk/index.html"/>
   </url>
   
