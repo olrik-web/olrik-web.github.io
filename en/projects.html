@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Marcus Olrik - Personal Projects" />
+    <title>Projects - Marcus Olrik</title>
+
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Marcus Olrik" />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+
+    <link rel="canonical" href="https://marcusolrik.dk/en/projects.html" />
+    <link rel="alternate" hreflang="da" href="https://marcusolrik.dk/projekter.html" />
+    <link rel="alternate" hreflang="en" href="https://marcusolrik.dk/en/projects.html" />
+
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header>
+      <div class="header-top">
+        <h1><a href="/en/">Marcus Olrik</a></h1>
+        <div class="header-right">
+          <nav class="main-nav">
+            <a href="/en/projects.html" class="active">Projects</a>
+            <!-- TODO: -->
+            <!-- <a href="/en/travel.html">Travel</a> -->
+          </nav>
+          <a href="/projekter.html" class="lang-switch" aria-label="Switch to Danish">DA</a>
+        </div>
+      </div>
+      <div class="subtitle">Personal Projects</div>
+    </header>
+
+    <main id="main">
+      <section>
+        <div class="intro">
+          <p>
+            A peek into projects I work on in my spare time. These are side projects born from curiosity and a desire to learn something
+            new – not polished products, but experiments and tools I personally need.
+          </p>
+        </div>
+      </section>
+
+      <section>
+        <div class="projects-grid">
+          <article class="project-card">
+            <h3>Route Finder</h3>
+            <p class="project-meta">ASP.NET Core • JavaScript • Leaflet.js • Azure</p>
+            <div class="description">
+              <p>
+                A web app for generating circular running, walking, and cycling routes. Built because I wanted to discover new routes in my
+                neighborhood without paying for premium route planning services.
+              </p>
+              <p>Features include:</p>
+              <ul>
+                <li>Click-to-select location or use your current location</li>
+                <li>Generate circular routes from 1-50km</li>
+                <li>Multiple activity types (walking, running, cycling, driving)</li>
+                <li>Download routes as GPX, GeoJSON, or JSON</li>
+              </ul>
+            </div>
+            <div class="project-links">
+              <a href="https://route-finder-dhbwfqbkguctg8cp.northeurope-01.azurewebsites.net/" target="_blank" rel="noopener noreferrer"
+                >Live Demo →</a
+              >
+              <a href="https://github.com/olrik-web/router-finder" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with vanilla HTML & CSS ❤️</p>
+    </footer>
+  </body>
+</html>

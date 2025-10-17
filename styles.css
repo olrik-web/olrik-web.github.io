@@ -83,6 +83,43 @@ header {
   margin-bottom: 0.5rem;
 }
 
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.main-nav {
+  display: flex;
+  gap: 1rem;
+}
+
+.main-nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s;
+}
+
+.main-nav a:hover {
+  border-bottom-color: #666;
+}
+
+.main-nav a.active {
+  border-bottom-color: #333;
+  font-weight: 500;
+}
+
+header h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+header h1 a:hover {
+  opacity: 0.8;
+}
+
 .lang-switch {
   font-size: 0.9rem;
   color: var(--text-secondary);
@@ -255,7 +292,102 @@ footer {
   font-size: 0.9rem;
 }
 
-@media (max-width: 600px) {
+/* Projects page styles */
+.projects-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.project-card {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+.project-card h3 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+}
+
+.project-meta {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0 0 1rem 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.project-links a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+/* Travel journal styles */
+.travel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.travel-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  aspect-ratio: 4/3;
+  background: #f5f5f5;
+}
+
+.travel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.travel-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.travel-location {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.travel-date {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #666;
+}
+
+.empty-state p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
   h1 {
     font-size: 2rem;
   }
@@ -268,6 +400,39 @@ footer {
 
   .date {
     margin-top: 0.25rem;
+  }
+
+  .header-right {
+    gap: 1rem;
+  }
+
+  .main-nav {
+    gap: 0.75rem;
+  }
+
+  .main-nav a {
+    font-size: 0.9rem;
+  }
+
+  .travel-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .header-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .travel-grid {
+    grid-template-columns: 1fr;
   }
 }
 

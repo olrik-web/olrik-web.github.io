@@ -1,0 +1,16 @@
+{
+  "images": [
+    {
+      "filename": "example1.jpg",
+      "location": "Copenhagen, Denmark",
+      "date": "October 2025",
+      "caption": "Optional description of the photo"
+    },
+    {
+      "filename": "example2.jpg",
+      "location": "Barcelona, Spain",
+      "date": "Summer 2025",
+      "caption": ""
+    }
+  ]
+}

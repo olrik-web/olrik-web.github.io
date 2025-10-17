@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Marcus Olrik - Travel Journal" />
+    <title>Travel - Marcus Olrik</title>
+
+    <link rel="icon" type="image/png" href="/assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-title" content="Marcus Olrik" />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+
+    <link rel="canonical" href="https://marcusolrik.dk/en/travel.html" />
+    <link rel="alternate" hreflang="da" href="https://marcusolrik.dk/rejsedagbog.html" />
+    <link rel="alternate" hreflang="en" href="https://marcusolrik.dk/en/travel.html" />
+
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
+
+    <header>
+      <div class="header-top">
+        <h1><a href="/en/index.html">Marcus Olrik</a></h1>
+        <div class="header-right">
+          <nav class="main-nav">
+            <a href="/en/projects.html">Projects</a>
+            <a href="/en/travel.html" class="active">Travel</a>
+          </nav>
+          <a href="/rejsedagbog.html" class="lang-switch" aria-label="Switch to Danish">DA</a>
+        </div>
+      </div>
+      <div class="subtitle">Travel Journal</div>
+    </header>
+
+    <main id="main">
+      <section>
+        <div class="intro">
+          <p>Photos from my travels around the world.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="travel-grid" id="travelGrid">
+          <!-- Images will be loaded here by JavaScript -->
+        </div>
+        <div id="emptyState" class="empty-state" style="display: none">
+          <p>No photos yet. Coming soon...</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built with vanilla HTML & CSS ❤️</p>
+    </footer>
+
+    <script>
+      // Load travel images from JSON
+      fetch('/assets/travel/images.json')
+        .then(response => response.json())
+        .then(data => {
+          const grid = document.getElementById('travelGrid');
+          const emptyState = document.getElementById('emptyState');
+          
+          if (data.images && data.images.length > 0) {
+            data.images.forEach(img => {
+              const article = document.createElement('article');
+              article.className = 'travel-item';
+              
+              const picture = document.createElement('img');
+              picture.src = `/assets/travel/${img.filename}`;
+              picture.alt = img.caption || '';
+              picture.loading = 'lazy';
+              
+              let overlay = '';
+              if (img.location || img.date) {
+                overlay = '<div class="travel-overlay">';
+                if (img.location) overlay += `<span class="travel-location">${img.location}</span>`;
+                if (img.date) overlay += `<span class="travel-date">${img.date}</span>`;
+                overlay += '</div>';
+              }
+              
+              article.innerHTML = overlay;
+              article.prepend(picture);
+              grid.appendChild(article);
+            });
+          } else {
+            emptyState.style.display = 'block';
+          }
+        })
+        .catch(() => {
+          document.getElementById('emptyState').style.display = 'block';
+        });
+    </script>
+  </body>
+</html>
