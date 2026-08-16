@@ -10,6 +10,7 @@
   --accent: #2563eb;
   --bg: #fafafa;
   --border: #e5e5e5;
+  --surface: #f0f0f0;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +20,7 @@
     --accent: #60a5fa;
     --bg: #121212;
     --border: #2a2a2a;
+    --surface: #1e1e1e;
   }
 }
 
@@ -64,8 +66,8 @@ body {
   top: 0;
 }
 
-a:focus,
-button:focus {
+a:focus-visible,
+button:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
@@ -103,11 +105,11 @@ header {
 }
 
 .main-nav a:hover {
-  border-bottom-color: #666;
+  border-bottom-color: var(--text-secondary);
 }
 
 .main-nav a.active {
-  border-bottom-color: #333;
+  border-bottom-color: var(--text-primary);
   font-weight: 500;
 }
 
@@ -131,24 +133,6 @@ header h1 a:hover {
 
 .lang-switch:hover {
   color: var(--accent);
-}
-
-.resume-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.25rem;
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.resume-link:hover {
-  text-decoration: underline;
-}
-
-.resume-link::before {
-  content: "↓";
-  font-size: 1.1em;
 }
 
 h1 {
@@ -196,20 +180,17 @@ h2 {
   color: var(--text-secondary);
 }
 
-.experience-item,
-.project-item {
+.experience-item {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 1px solid var(--border);
 }
 
-.experience-item:last-child,
-.project-item:last-child {
+.experience-item:last-child {
   border-bottom: none;
 }
 
-.experience-header,
-.project-header {
+.experience-header {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
@@ -217,14 +198,12 @@ h2 {
   flex-wrap: wrap;
 }
 
-.job-title,
-.project-name {
+.job-title {
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-.company,
-.project-tech {
+.company {
   color: var(--accent);
   font-weight: 500;
 }
@@ -248,41 +227,6 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-.tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-top: 1rem;
-}
-
-.tech-tag {
-  background: #f3f4f6;
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-}
-
-.interests {
-  color: var(--text-secondary);
-  line-height: 1.8;
-}
-
-.blog-link {
-  display: inline-block;
-  margin-top: 1rem;
-  padding: 0.75rem 1.5rem;
-  background: var(--accent);
-  color: white;
-  text-decoration: none;
-  border-radius: 6px;
-  transition: opacity 0.2s;
-}
-
-.blog-link:hover {
-  opacity: 0.9;
-}
-
 footer {
   margin-top: 4rem;
   padding-top: 2rem;
@@ -292,6 +236,15 @@ footer {
   font-size: 0.9rem;
 }
 
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
 /* Projects page styles */
 .projects-grid {
   display: grid;
@@ -299,7 +252,7 @@ footer {
 }
 
 .project-card {
-  border: 1px solid #ddd;
+  border: 1px solid var(--border);
   padding: 1.5rem;
   border-radius: 4px;
 }
@@ -310,7 +263,7 @@ footer {
 }
 
 .project-meta {
-  color: #666;
+  color: var(--text-secondary);
   font-size: 0.9rem;
   margin: 0 0 1rem 0;
 }
@@ -322,7 +275,7 @@ footer {
 }
 
 .project-links a {
-  color: #0066cc;
+  color: var(--accent);
   text-decoration: none;
   font-weight: 500;
 }
@@ -344,7 +297,7 @@ footer {
   overflow: hidden;
   border-radius: 4px;
   aspect-ratio: 4/3;
-  background: #f5f5f5;
+  background: var(--surface);
 }
 
 .travel-item img {
@@ -380,7 +333,7 @@ footer {
 .empty-state {
   text-align: center;
   padding: 3rem 1rem;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .empty-state p {
@@ -392,8 +345,7 @@ footer {
     font-size: 2rem;
   }
 
-  .experience-header,
-  .project-header {
+  .experience-header {
     flex-direction: column;
     align-items: flex-start;
   }

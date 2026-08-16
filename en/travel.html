@@ -16,6 +16,12 @@
     <link rel="canonical" href="https://marcusolrik.dk/en/travel.html" />
     <link rel="alternate" hreflang="da" href="https://marcusolrik.dk/rejsedagbog.html" />
     <link rel="alternate" hreflang="en" href="https://marcusolrik.dk/en/travel.html" />
+    <link rel="alternate" hreflang="x-default" href="https://marcusolrik.dk/rejsedagbog.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://marcusolrik.dk/en/travel.html" />
+    <meta property="og:title" content="Travel - Marcus Olrik" />
+    <meta property="og:description" content="Photos from my travels around the world." />
 
     <link rel="stylesheet" href="/styles.css" />
   </head>
@@ -54,46 +60,9 @@
     </main>
 
     <footer>
-      <p>Built with vanilla HTML & CSS ❤️</p>
+      <p>Marcus Olrik · <a href="mailto:molrik@outlook.com">molrik@outlook.com</a></p>
     </footer>
 
-    <script>
-      // Load travel images from JSON
-      fetch('/assets/travel/images.json')
-        .then(response => response.json())
-        .then(data => {
-          const grid = document.getElementById('travelGrid');
-          const emptyState = document.getElementById('emptyState');
-          
-          if (data.images && data.images.length > 0) {
-            data.images.forEach(img => {
-              const article = document.createElement('article');
-              article.className = 'travel-item';
-              
-              const picture = document.createElement('img');
-              picture.src = `/assets/travel/${img.filename}`;
-              picture.alt = img.caption || '';
-              picture.loading = 'lazy';
-              
-              let overlay = '';
-              if (img.location || img.date) {
-                overlay = '<div class="travel-overlay">';
-                if (img.location) overlay += `<span class="travel-location">${img.location}</span>`;
-                if (img.date) overlay += `<span class="travel-date">${img.date}</span>`;
-                overlay += '</div>';
-              }
-              
-              article.innerHTML = overlay;
-              article.prepend(picture);
-              grid.appendChild(article);
-            });
-          } else {
-            emptyState.style.display = 'block';
-          }
-        })
-        .catch(() => {
-          document.getElementById('emptyState').style.display = 'block';
-        });
-    </script>
+    <script src="/assets/travel/travel.js" defer></script>
   </body>
 </html>
