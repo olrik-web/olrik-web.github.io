@@ -48,5 +48,8 @@ fetch('/assets/travel/images.json')
     });
   })
   .catch(() => {
-    document.getElementById('emptyState').style.display = 'block';
+    var emptyState = document.getElementById('emptyState');
+    emptyState.style.display = 'block';
+    var errorMsg = emptyState.getAttribute('data-error');
+    if (errorMsg) emptyState.textContent = errorMsg;
   });

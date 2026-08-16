@@ -165,7 +165,12 @@ header h1 a:hover {
   color: var(--accent);
 }
 
+/* The toggle only works with JavaScript, so hide it unless .js is present */
 .theme-toggle {
+  display: none;
+}
+
+html.js .theme-toggle {
   background: none;
   border: none;
   padding: 0.25rem;
@@ -356,6 +361,17 @@ footer a:hover {
 
 .project-links a:hover {
   text-decoration: underline;
+}
+
+.project-status {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 0.15rem 0.7rem;
+  margin: 0 0 0.75rem 0;
 }
 
 /* Travel journal styles */

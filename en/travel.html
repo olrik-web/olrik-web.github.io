@@ -3,18 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      (function () {
-        var stored = localStorage.getItem("theme");
-        var theme =
-          stored === "light" || stored === "dark"
-            ? stored
-            : window.matchMedia("(prefers-color-scheme: dark)").matches
-              ? "dark"
-              : "light";
-        document.documentElement.setAttribute("data-theme", theme);
-      })();
-    </script>
+    <meta name="robots" content="noindex" />
+    <script src="/assets/theme-init.js"></script>
     <meta name="description" content="Marcus Olrik - Travel Journal" />
     <title>Travel - Marcus Olrik</title>
 
@@ -24,6 +14,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Marcus Olrik" />
     <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <link rel="preload" href="/assets/fonts/schibsted-grotesk-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/schibsted-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
 
     <link rel="canonical" href="https://marcusolrik.dk/en/travel.html" />
     <link rel="alternate" hreflang="da" href="https://marcusolrik.dk/rejsedagbog.html" />
@@ -42,11 +34,11 @@
 
     <header>
       <div class="header-top">
-        <h1><a href="/en/index.html">Marcus Olrik</a></h1>
+        <h1><a href="/en/">Marcus Olrik</a></h1>
         <div class="header-right">
           <nav class="main-nav">
             <a href="/en/projects.html">Projects</a>
-            <a href="/en/travel.html" class="active">Travel</a>
+            <a href="/en/travel.html" class="active" aria-current="page">Travel</a>
           </nav>
           <a href="/rejsedagbog.html" class="lang-switch" aria-label="Switch to Danish">DA</a>
           <button
@@ -89,14 +81,14 @@
         <div class="travel-grid" id="travelGrid">
           <!-- Images will be loaded here by JavaScript -->
         </div>
-        <div id="emptyState" class="empty-state" style="display: none">
+        <div id="emptyState" class="empty-state" style="display: none" data-error="Couldn't load the photos.">
           <p>No photos yet. Coming soon...</p>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>Marcus Olrik · <a href="mailto:molrik@outlook.com">molrik@outlook.com</a></p>
+      <p>Marcus Olrik · <a href="mailto:molrik&#64;outlook.com">molrik&#64;outlook.com</a></p>
     </footer>
 
     <script src="/assets/travel/travel.js" defer></script>

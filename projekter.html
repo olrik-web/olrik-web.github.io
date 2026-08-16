@@ -3,18 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script>
-      (function () {
-        var stored = localStorage.getItem("theme");
-        var theme =
-          stored === "light" || stored === "dark"
-            ? stored
-            : window.matchMedia("(prefers-color-scheme: dark)").matches
-              ? "dark"
-              : "light";
-        document.documentElement.setAttribute("data-theme", theme);
-      })();
-    </script>
+    <script src="/assets/theme-init.js"></script>
     <meta name="description" content="Marcus Olrik - Personlige Projekter" />
     <title>Projekter - Marcus Olrik</title>
 
@@ -24,6 +13,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
     <meta name="apple-mobile-web-app-title" content="Marcus Olrik" />
     <link rel="manifest" href="/assets/favicon/site.webmanifest" />
+    <link rel="preload" href="/assets/fonts/schibsted-grotesk-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/schibsted-grotesk-700.woff2" as="font" type="font/woff2" crossorigin />
 
     <link rel="canonical" href="https://marcusolrik.dk/projekter.html" />
     <link rel="alternate" hreflang="da" href="https://marcusolrik.dk/projekter.html" />
@@ -45,7 +36,7 @@
         <h1><a href="/">Marcus Olrik</a></h1>
         <div class="header-right">
           <nav class="main-nav">
-            <a href="/projekter.html" class="active">Projekter</a>
+            <a href="/projekter.html" class="active" aria-current="page">Projekter</a>
             <!-- TODO: -->
             <!-- <a href="/rejsedagbog.html">Rejsedagbog</a> -->
           </nav>
@@ -114,12 +105,30 @@
               <a href="https://github.com/olrik-web/router-finder" target="_blank" rel="noopener noreferrer">GitHub →</a>
             </div>
           </article>
+
+          <article class="project-card">
+            <h3>StateForge</h3>
+            <p class="project-status">Under udvikling</p>
+            <p class="project-meta">ASP.NET Core • .NET 10 • EF Core • SQL Server • Azure Service Bus • Polly • OpenTelemetry • SignalR • .NET Aspire</p>
+            <div class="description">
+              <p>
+                En reconciliation engine til at holde systemer i sync — og bevise, at de faktisk er det. De fleste integrationsværktøjer
+                flytter data og håber, det nåede frem. StateForge deler det op i to spor: en hurtig, optimistisk sync-sti og en uafhængig
+                verifikationssti, der bagefter tjekker, om synkroniseringen faktisk lykkedes — og reparerer eller flagger afvigelser.
+              </p>
+              <p>
+                Min måde at udforske robuste integrationer på: Azure Service Bus til messaging, Polly til resilience, OpenTelemetry og
+                Serilog til observability, Testcontainers til integrationstests — orkestreret lokalt med .NET Aspire på .NET 10.
+              </p>
+              <p>Ikke offentligt endnu — repoet deles, når fundamentet er på plads.</p>
+            </div>
+          </article>
         </div>
       </section>
     </main>
 
     <footer>
-      <p>Marcus Olrik · <a href="mailto:molrik@outlook.com">molrik@outlook.com</a></p>
+      <p>Marcus Olrik · <a href="mailto:molrik&#64;outlook.com">molrik&#64;outlook.com</a></p>
     </footer>
     <script src="/assets/theme.js" defer></script>
 </body>
