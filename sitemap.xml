@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
-  <!-- Travel pages are intentionally excluded until they have content. -->
+  <!-- Project and travel pages are intentionally excluded until they're linked from the site. -->
 
   <url>
     <loc>https://marcusolrik.dk/</loc>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="da" href="https://marcusolrik.dk/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marcusolrik.dk/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://marcusolrik.dk/"/>
@@ -14,26 +14,10 @@
 
   <url>
     <loc>https://marcusolrik.dk/en/</loc>
-    <lastmod>2026-08-16</lastmod>
+    <lastmod>2026-10-25</lastmod>
     <xhtml:link rel="alternate" hreflang="da" href="https://marcusolrik.dk/"/>
     <xhtml:link rel="alternate" hreflang="en" href="https://marcusolrik.dk/en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://marcusolrik.dk/"/>
-  </url>
-
-  <url>
-    <loc>https://marcusolrik.dk/projekter.html</loc>
-    <lastmod>2026-08-16</lastmod>
-    <xhtml:link rel="alternate" hreflang="da" href="https://marcusolrik.dk/projekter.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://marcusolrik.dk/en/projects.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marcusolrik.dk/projekter.html"/>
-  </url>
-
-  <url>
-    <loc>https://marcusolrik.dk/en/projects.html</loc>
-    <lastmod>2026-08-16</lastmod>
-    <xhtml:link rel="alternate" hreflang="da" href="https://marcusolrik.dk/projekter.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://marcusolrik.dk/en/projects.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://marcusolrik.dk/projekter.html"/>
   </url>
 
 </urlset>
