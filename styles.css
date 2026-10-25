@@ -255,6 +255,10 @@ h2 {
   color: var(--text-secondary);
 }
 
+.intro p + p {
+  margin-top: 1rem;
+}
+
 .experience-item {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
